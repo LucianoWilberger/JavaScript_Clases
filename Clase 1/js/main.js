@@ -1,9 +1,8 @@
-let num1 = 20;
-let num2 = 15;
+let años = prompt ("Ingresa tu edad y se le sumaran 20 años");
 
-let sumaDeNums = num1 + num2;
+let edad = parseInt(años);
 
-console.log(sumaDeNums);
+alert(edad + 20);
 
 
 
