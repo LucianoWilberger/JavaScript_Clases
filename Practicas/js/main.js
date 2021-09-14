@@ -88,6 +88,30 @@ console.log(hijuan.endsWith("s")); /* Este va a tirar TRUE */
 console.log(hijuan.endsWith("H")); /* Este va a tirar FALSE*/
 
 
+let prueba = prompt('Ingrese un nombre');
+
+while ((prueba != "ESC" ) && (prueba != "esc")){
+    switch (prueba){
+        case "Luciano" && "LUCIANO":
+        alert("Hola Luciano");
+        break;
+
+        case "Juan" && "JUAN":
+            alert("Hola Juan");
+            break;
+
+        default:
+            alert("¿Quien re mil por*nga sos?");
+            break;
+    }      
+
+              
+
+      
+}
+
+
+
 
 
 
