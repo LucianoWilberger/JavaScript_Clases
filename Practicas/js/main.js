@@ -110,6 +110,14 @@ while ((prueba != "ESC" ) && (prueba != "esc")){
       
 }
 
+const numero = prompt("Ingrese la cantidad de veces que desea visualizar 'Hola'");
+
+for (let i = 0; i < numero; i++) {
+
+    alert("Hola");
+
+}
+
 
 
 
