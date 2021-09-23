@@ -1,43 +1,82 @@
-// Este codigo muestra algunos datos de algunos futbolistas de la seleccion Argentina, y devolvera datos segun su altura o posicion
 
-class caractFutbolista {
-    constructor(nombre, altura, posicion){
-        this.nombre = nombre;
-        this.altura = altura;
-        this.posicion = posicion;
+class SwordsMaker {
+    constructor(nameSword, type, resistance, damage, pitcher, zoneSpawn, radar) {
+        this.nameSword = nameSword;
+        this.type = type;
+        this.resistance = resistance;
+        this.damage = damage;
+        this.pitcher = pitcher;
+        this.zoneSpawn = zoneSpawn;
+        this.radar = radar;
     }
+
+
 }
 
-const futbolistas = []
-let messi = new caractFutbolista ("Lionel Messi", 165, "delantero");
-let kun = new caractFutbolista ("Sergio Agüero", 172, "delantero");
-let dimaria = new caractFutbolista ("Angel Di Maria", 180, "medio");
-let martinez = new caractFutbolista ("Emiliano Martinez", 193, "arquero");
+const nameSword = prompt('Elija una espada:\nSword of Caos\nSword Gladiator\nZombie Sword');
 
-futbolistas.push(messi, kun, dimaria, martinez);
-
-// // Muestras en consola
-// Mostrar solo nombres de futbolistas
-let listaJugadores = []
-for (const nomFut of futbolistas) {
-    listaJugadores.push(nomFut.nombre)
+function show(Message) {
+    console.log(Message)
 }
-console.log("Algunos Futbolistas de la seleccion Argentina son " + listaJugadores.toString());
 
-// Filtrar y mostrar futbolistas con Posicion delantero
-const delanteros = futbolistas.filter(jugador => jugador.posicion == "delantero");
-const nombresJugadoresDel = [];
-for(const jugador of delanteros){
-    nombresJugadoresDel.push(jugador.nombre)
-}
-console.log("De estos futbolistas los que juegan como delanteros son " + nombresJugadoresDel.toString());
+function swordChoise(nameSword) {
+    switch (nameSword) {
+        case "Sword of Caos":
+            alert("Has elegido la: " + caosSword.nameSword + "\nQue es de tipo: " + caosSword.type + "\nTiene una resistencia: " + caosSword.resistance + "\nTiene un ataque base de: " + caosSword.damage + "\nLanza:" + caosSword.pitcher + "\nSe puede encontrar en: " + caosSword.zoneSpawn)
+            break;
 
-//Ordenar altura de jugadores de mayor a menor
-const ordAlturas = [];
-const ordAlt = futbolistas.sort((a,b)=>b.altura - a.altura)
-for (const mayorAMenor of ordAlt) {
-    ordAlturas.push(mayorAMenor.nombre)
+        case "sword of caos":
+            alert("Has elegido la: " + caosSword.nameSword + "\nQue es de tipo: " + caosSword.type + "\nTiene una resistencia: " + caosSword.resistance + "\nTiene un ataque base de: " + caosSword.damage + "\nLanza:" + caosSword.pitcher + "\nSe puede encontrar en: " + caosSword.zoneSpawn)
+            bcaos
+        case "Sword Gladiator":
+            alert("Has elegido la: " + gladiatorSword.nameSword + "\nQue es de tipo: " + gladiatorSword.type + "\nTiene una resistencia: " + gladiatorSword.resistance + "\nTiene un ataque base de: " + gladiatorSword.damage + "\nLanza:" + gladiatorSword.pitcher + "\nSe puede encontrar en: " + gladiatorSword.zoneSpawn)
+            break;
+
+        case "sword gladiator":
+            alert("Has elegido la: " + gladiatorSword.nameSword + "\nQue es de tipo: " + gladiatorSword.type + "\nTiene una resistencia: " + gladiatorSword.resistance + "\nTiene un ataque base de: " + gladiatorSword.damage + "\nLanza:" + gladiatorSword.pitcher + "\nSe puede encontrar en: " + gladiatorSword.zoneSpawn)
+            break;
+
+        case "Zombie Sword":
+            alert("Has elegido la: " + zombieSword.nameSword + "\nQue es de tipo: " + zombieSword.type + "\nTiene una resistencia: " + zombieSword.resistance + "\nTiene un ataque base de: " + zombieSword.damage + "\nLanza:" + zombieSword.pitcher + "\nSe puede encontrar en: " + zombieSword.zoneSpawn)
+            break;
+        case "zombie sword":
+            alert("Has elegido la: " + zombieSword.nameSword + "\nQue es de tipo: " + zombieSword.type + "\nTiene una resistencia: " + zombieSword.resistance + "\nTiene un ataque base de: " + zombieSword.damage + "\nLanza:" + zombieSword.pitcher + "\nSe puede encontrar en: " + zombieSword.zoneSpawn)
+            break;
+
+        default:
+            alert("No eligio ninguna de las espadas disponibles")
+            break;
+    }
+
+
+
+
 }
-console.log("Los jugadores ordenados de mayor a menor altura son " + ordAlturas.toString());
+
+
+
+const gladiatorSword = new SwordsMaker('Espada del Gladiador', 'Normal', 'Baja', '50', 'No', 'Market, Field, Chivalry, Castle', 'No');
+
+const caosSword = new SwordsMaker('Espada del Caos', 'Muy raro', 'Alta', '300', 'Escupe Veneno y Fuego', 'Kaos', 'Yes');
+
+const zombieSword = new SwordsMaker('Espada Zombie', 'Raro', 'Normal', '100', 'Escupe Veneno Debil', 'Graveyard, Dark forest, Haunted castle', 'No');
+
+const swords = [];
+
+swords.push(gladiatorSword, caosSword, zombieSword);
+
+const nombreEspadas = [];
+for (const nombres of swords) {
+    nombreEspadas.push(nombres.nameSword)
+
+}
+
+
+
+
+
+swordChoise(nameSword)
+
+console.log("Las espadas son: " + nombreEspadas.toString());
 
 
