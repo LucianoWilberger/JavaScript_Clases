@@ -15,9 +15,6 @@ class SwordsMaker {
 
 const nameSword = prompt('Elija una espada:\nSword of Caos\nSword Gladiator\nZombie Sword');
 
-function show(Message) {
-    console.log(Message)
-}
 
 function swordChoise(nameSword) {
     switch (nameSword) {
@@ -53,15 +50,10 @@ function swordChoise(nameSword) {
 
 }
 
-
-
-const gladiatorSword = new SwordsMaker('Espada del Gladiador', 'Normal', 'Baja', '50', 'No', 'Market, Field, Chivalry, Castle', 'No');
-
-const caosSword = new SwordsMaker('Espada del Caos', 'Muy raro', 'Alta', '300', 'Escupe Veneno y Fuego', 'Kaos', 'Yes');
-
-const zombieSword = new SwordsMaker('Espada Zombie', 'Raro', 'Normal', '100', 'Escupe Veneno Debil', 'Graveyard, Dark forest, Haunted castle', 'No');
-
 const swords = [];
+const gladiatorSword = new SwordsMaker('Espada del Gladiador', 'Normal', 'Baja', '50', 'No', 'Market, Field, Chivalry, Castle', 'No');
+const caosSword = new SwordsMaker('Espada del Caos', 'Muy raro', 'Alta', '300', 'Escupe Veneno y Fuego', 'Kaos', 'Yes');
+const zombieSword = new SwordsMaker('Espada Zombie', 'Raro', 'Normal', '100', 'Escupe Veneno Debil', 'Graveyard, Dark forest, Haunted castle', 'No');
 
 swords.push(gladiatorSword, caosSword, zombieSword);
 
@@ -71,12 +63,16 @@ for (const nombres of swords) {
 
 }
 
-
-
-
-
 swordChoise(nameSword)
 
 console.log("Las espadas son: " + nombreEspadas.toString());
+
+const baseDamage = [];
+const baseDmg = swords.sort((a,b)=>b.damage - a.damage)
+for (const MasDmg of baseDmg){
+    baseDamage.push(MasDmg.damage)
+}
+
+console.log("Las espadas con mas daño son: " + baseDamage.toString());
 
 
