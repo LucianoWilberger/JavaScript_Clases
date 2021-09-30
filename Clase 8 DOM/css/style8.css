@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../sword.jpg);
+    font-family: 'Bonheur Royale', cursive;
+   
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-family: 'Explora', cursive;
+    font-size: 55px;
+
+}
+
+.texts{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    color: black;
+   
+    
+}
+
+.prompteado{
+    padding: 20px;
+    margin: 20px;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
