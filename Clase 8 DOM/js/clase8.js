@@ -120,13 +120,15 @@ for (const chrter of character){
     document.body.appendChild(contenedor);                          
 }
 
-let desafio8 = prompt("Ingrese un texto que sera aplicado en la pagina");
+let desafio8 = prompt("Ingrese un texto que sera aplicado al final la pagina");
 
-for (const desafio of desafio8){
-    let dess = document.createElement[1]("div");
+function showHTML(desafio8){
+    let dess = document.createElement("p");
 
     dess.innerHTML = `<p class="prompteado"> El texto ingresado es: ${desafio8}</p>`;
 
     document.body.appendChild(dess);
 }
+
+showHTML(desafio8);
 
