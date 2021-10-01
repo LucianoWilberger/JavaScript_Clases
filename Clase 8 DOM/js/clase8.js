@@ -96,7 +96,7 @@ for (const MasDmg of baseDmg){
 console.log("Las espadas con mas daño son: " + baseDamage.toString());
 
 
-//Ejemplo de crear elemtno en DOM. Aplicarlo con appendChild y eliminarlo con parentNode.RemoveChild
+//Ejemplo de crear elemento en DOM. Aplicarlo con appendChild y eliminarlo con parentNode.RemoveChild
 let gladiatoR = document.createElement("p")
 
 gladiatoR.innerHTML = "Gladiador";
