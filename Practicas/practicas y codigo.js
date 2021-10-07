@@ -148,6 +148,3 @@ function showForm(e){
 
     document.getElementById('formulario').reset();
 }
-
-
-
