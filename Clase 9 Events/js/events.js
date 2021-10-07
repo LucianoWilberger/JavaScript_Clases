@@ -62,21 +62,7 @@ const almacLocal = (clave, valor) => {
 
 }
 
-/* Para almacenar en STORAGE los datos que se van a utilizar luego.
-const armas = [
-    {id: 1, tipo: "Espada", daño: "170", resistencia: 200},
-    {id: 2, tipo: "Hacha", daño: "210", resistencia: 250},
-    {id: 3, tipo: "Daga", daño: "90", resistencia: 100},
-];
 
-Almacenado por ID
-for (const arma of armas){
-    almacLocal(armas.id, JSON.stringify(arma));
-} 
-
-Almacena todo el ARRAY
-almacLocal("listaArmas", JSON.stringify(armas));
-*/
 
 
 class Armas {

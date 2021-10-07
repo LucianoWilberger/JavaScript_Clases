@@ -15,6 +15,9 @@ mostrarArmas.addEventListener("click", mostrarArms)
 let ataque = document.getElementById("atack");
 ataque.addEventListener("click", atack)
 
+let potenciar = document.getElementById("potencia");
+potenciar.addEventListener("click", power)
+
 
 //Funciones para los botones
 function showWarrior(){
@@ -50,19 +53,6 @@ function showLadron(){
 
 }
 
-function mostrarArms(){
-    for (const arma of almArmas){
-        armas.push(new Armas(arma));
-    }
-   
-}
-
-function atack(){
-    for (const tipo of armas) {
-        tipo.atacar();
-    }
-}
-
 /* Para almacenar en STORAGE los datos que se van a utilizar luego.
 const armas = [
     {id: 1, tipo: "Espada", daño: "170", resistencia: 200},
@@ -74,6 +64,13 @@ Almacenado por ID
 for (const arma of armas){
     almacLocal(armas.id, JSON.stringify(arma));
 } 
+
+
+// Funcion para guardar en Storage
+const almacLocal = (clave, valor) => {
+    localStorage.setItem(clave, valor);
+
+}
 
 Almacena todo el ARRAY
 almacLocal("listaArmas", JSON.stringify(armas));
@@ -97,10 +94,7 @@ const dañoLadron = new charactersStats('130')
 //Pusheando las variables de daño hacia la variable damageCTs
 damagesCTs.push(dañoWarrior,dañoLadron,dañoDoc)
 
-const almacLocal = (clave, valor) => {
-    localStorage.setItem(clave, valor);
 
-}
 
 // Constructor para lo que queda en STORAGE se PUSHEE dentro de la variable almArmas[[]]
 class Armas {
@@ -121,8 +115,29 @@ class Armas {
 
 }
 
+//Funcion para mostrar las armas por consola con el boton
+function mostrarArms(){
+    for (const arma of almArmas){
+        armas.push(new Armas(arma));
+    }
+   
+}
+
+// Funcion para aplicar el metodo atacar el array de armas
+function atack(){
+    for (const tipo of armas) {
+        tipo.atacar();
+    }
+}
+
+// Funcion para aplicar el metodo de potenciar al array de armas
+function power(){
+    for (const tipo of armas){
+        tipo.potenciar();
+    }
+}
+
 //Uso de JSON.parse para traer del STORAGE el array de armas
 const almArmas = JSON.parse(localStorage.getItem('listaArmas'));
-let armas = []
-
+let armas = [];
 console.log(armas);
