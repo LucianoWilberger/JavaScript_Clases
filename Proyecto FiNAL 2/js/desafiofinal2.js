@@ -1,4 +1,5 @@
 
+
 // Variables que se muestran en el HTML usando EVENTS.
 let warrior = document.getElementById("warrior");
 warrior.addEventListener("click", showWarrior)
@@ -59,19 +60,14 @@ const armas = [
     {id: 2, tipo: "Hacha", daño: "210", resistencia: 250},
     {id: 3, tipo: "Daga", daño: "90", resistencia: 100},
 ];
-
 Almacenado por ID
 for (const arma of armas){
     almacLocal(armas.id, JSON.stringify(arma));
 } 
-
-
 // Funcion para guardar en Storage
 const almacLocal = (clave, valor) => {
     localStorage.setItem(clave, valor);
-
 }
-
 Almacena todo el ARRAY
 almacLocal("listaArmas", JSON.stringify(armas));
 */
