@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url(./ds.png);
+    background-size: cover;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+}
+
+.primerDiv{
+    display: none;
+    background-color: white;
+    width: 10%;
+}
+
+#botonsCont{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+#boxPrueba{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    width: 500px;
+    height: 100px;
+    padding: 40px;
+    text-align: center;
+}

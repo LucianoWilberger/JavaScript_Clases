@@ -6,7 +6,7 @@ const personajes = [
 
 for (const personaje of personajes){
     $('#personajes').append(`
-    <div> <h4>Clase: ${personaje.nombre}</h4> 
+    <div <h4>Clase: ${personaje.nombre}</h4> 
         <b>Daño: ${personaje.daño}</b>
         <button id="btn${personaje.id}">Elegir</button>
         </div>
@@ -17,4 +17,31 @@ $(`#btn${personaje.id}`).on('click', function(){
 });
 
 };
+
+$('body').prepend('<h5>¡Hola Aventureros!</h5>');
+
+$('#botom').click(() => {
+    $('#personajes').slideDown('slow');
+})
+
+$('p').css("background-color", "red");
+$('p').css("width", "13%");
+
+$(document).ready(function(){
+    $('#fadeO').click(function(){
+        $('#boxPrueba').fadeOut(5000);
+    })
+})
+
+$(document).ready(function(){
+    $('#fadeI').click(function(){
+        $('#boxPrueba').fadeIn(5000);
+    })
+})
+
+$(document).ready(function(){
+    $('#fadeTo').click(function(){
+        $('#boxPrueba').fadeToggle(1000);
+    })
+})
 
