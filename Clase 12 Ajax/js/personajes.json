@@ -1,0 +1,16 @@
+[
+    {"Nombre": "Warrior",
+     "Daño": 100,
+     "Vida": 200},
+    {
+    "Nombre": "Doctor De la Plaga",
+    "Daño": 50,
+    "Vida": 100 
+     },
+     {"Nombre": "Ladron",
+      "Daño": 70,
+      "Vida": 130
+
+
+     }
+]
