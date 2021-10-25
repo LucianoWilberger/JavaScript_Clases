@@ -13,7 +13,7 @@ for (const personaje of personajes){
         `);
 
 $(`#btn${personaje.id}`).on('click', function(){
-    console.log(`Elegiste al ${personaje.nombre}`);
+    this.append(`Elegiste al ${personajes.nombre}`);
 });
 
 };
